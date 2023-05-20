@@ -24,12 +24,18 @@ const SC_Footer = styled.div`
 
   margin:50px auto 0px auto;
 `
+const SC_Shadow = styled.div`
+    height:90px;
+  `
 
 export default function Footer(props) {
 
   return (
-    <SC_Footer data-test="footer">
-      {props.amount}/8 concluídos
-    </SC_Footer>
+    <>
+      <SC_Shadow />
+      <SC_Footer data-test="footer">
+        {props.amount}/8 concluídos
+      </SC_Footer>
+    </>
   )
 }
