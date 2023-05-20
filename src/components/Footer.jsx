@@ -28,7 +28,7 @@ const SC_Footer = styled.div`
 export default function Footer(props) {
 
   return (
-    <SC_Footer>
+    <SC_Footer data-test="footer">
       {props.amount}/8 concluídos
     </SC_Footer>
   )

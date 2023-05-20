@@ -258,44 +258,44 @@ export default function Cards(props) {
   const { amount, setAmount } = props
 
   return (
-    <ul>
+    <ul data-test="flashcard">
       {estado === 0 && (
         <SC_Front >
-          Pergunta {props.number}
-          <img src={img0} alt="setinha" onClick={() => setEstado(1)} />
+          <p data-test="flashcard-text">Pergunta {props.number}</p>
+          <img data-test="play-btn" src={img0} alt="setinha" onClick={() => setEstado(1)} />
         </SC_Front>
       )}
       {estado === 1 && (
         <SC_BackCardQuestion>
-          {props.question}
-          <img src={img1} alt="Botao da giradinha" onClick={() => setEstado(2)} />
+          <p data-test="flashcard-text">{props.question}</p>
+          <img data-test="turn-btn" src={img1} alt="Botao da giradinha" onClick={() => setEstado(2)} />
         </SC_BackCardQuestion>
       )}
       {estado === 2 && (
         <SC_BackCardAnswer>
-          {props.answer}
+          <p data-test="flashcard-text">{props.answer}</p>
           <SC_div>
-            <SC_ButtonRed onClick={redAnswer}>Não lembrei</SC_ButtonRed>
-            <SC_ButtonOrange onClick={orangeAnswer}>Quase não lembrei</SC_ButtonOrange>
-            <SC_ButtonGreen onClick={greenAnswer}>Zap!</SC_ButtonGreen>
+            <SC_ButtonRed data-test="no-btn" onClick={redAnswer}>Não lembrei</SC_ButtonRed>
+            <SC_ButtonOrange data-test="partial-btn" onClick={orangeAnswer}>Quase não lembrei</SC_ButtonOrange>
+            <SC_ButtonGreen data-test="zap-btn" onClick={greenAnswer}>Zap!</SC_ButtonGreen>
           </SC_div>
         </SC_BackCardAnswer>
       )}
       {estado === 3 && (
         <SC_RedAnswer>
-          Pergunta {props.number}
+          <p data-test="flashcard-text">Pergunta {props.number}</p>
           <img src={erro} alt="error-icon" />
         </SC_RedAnswer>
       )}
       {estado === 4 && (
         <SC_OrangeAnswer>
-          Pergunta {props.number}
+          <p data-test="flashcard-text">Pergunta {props.number}</p>
           <img src={almost} alt="almost-icon" />
         </SC_OrangeAnswer>
       )}
       {estado === 5 && (
         <SC_GreenAnswer>
-          Pergunta {props.number}
+          <p data-test="flashcard-text">Pergunta {props.number}</p>
           <img src={right} alt="right-icon" />
         </SC_GreenAnswer>
       )}
