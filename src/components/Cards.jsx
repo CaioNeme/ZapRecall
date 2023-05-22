@@ -284,19 +284,19 @@ export default function Cards(props) {
       {estado === 3 && (
         <SC_RedAnswer>
           <p data-test="flashcard-text">Pergunta {props.number}</p>
-          <img src={erro} alt="error-icon" />
+          <img data-test="no-icon" src={erro} alt="error-icon" />
         </SC_RedAnswer>
       )}
       {estado === 4 && (
         <SC_OrangeAnswer>
           <p data-test="flashcard-text">Pergunta {props.number}</p>
-          <img src={almost} alt="almost-icon" />
+          <img data-test="partial-icon" src={almost} alt="almost-icon" />
         </SC_OrangeAnswer>
       )}
       {estado === 5 && (
         <SC_GreenAnswer>
           <p data-test="flashcard-text">Pergunta {props.number}</p>
-          <img src={right} alt="right-icon" />
+          <img data-test="zap-icon" src={right} alt="right-icon" />
         </SC_GreenAnswer>
       )}
 
